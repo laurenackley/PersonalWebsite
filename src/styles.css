@@ -1,4 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-#name{
+.heading{
   text-align: center;
+}
+#skills{
+  columns: 2;
+}
+#company{
+  text-align: right;
 }
