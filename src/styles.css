@@ -1,21 +1,39 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-.heading{
+.heading {
   text-align: center;
 }
-#skills{
+#skills {
   columns: 2;
   column-gap: 45px;
 }
-#company{
+#company {
   text-align: right;
 }
-#contact{
+#contact {
   /* display: flex; */
   justify-content: space-around;
   align-items: stretch;
 }
-.pictures{
-  justify-content: center;
+.pictures {
   height: 500px;
   width: 750px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+}
+.carousel-control-prev-icon {
+  background-image: url("https://w7.pngwing.com/pngs/987/229/png-transparent-arrow-right-arrow-angle-web-design-image-file-formats-thumbnail.png");
+  transform: scaleX(-1);
+}
+.carousel-control-next-icon {
+  background-image: url("https://w7.pngwing.com/pngs/987/229/png-transparent-arrow-right-arrow-angle-web-design-image-file-formats-thumbnail.png");
+}
+.carouselImages {
+  height: 500px;
+  width: 750px;
+}
+.schema{
+  height: 100%;
+  width: 100%;
 }

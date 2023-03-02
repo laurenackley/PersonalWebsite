@@ -1,55 +1,66 @@
 <h1 id="name">Welcome to my personal Website!</h1>
-<br>
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
+<br />
 <div class="d-flex">
-	<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
-		<li ngbNavItem="top">
-			<a ngbNavLink>Resume</a>
-			<ng-template ngbNavContent>
-				<div>
-			<!-- <a routerLink="/resume" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="activeResume = true">Click me</a> -->
-        <app-resume></app-resume>
-      </div>
-			</ng-template>
-		</li>
-		<li ngbNavItem="middle">
-			<a ngbNavLink>Middle</a>
-			<ng-template ngbNavContent>
-				<p>
-					Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-					farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-					ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-					helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-					8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-					stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
-				</p>
-			</ng-template>
-		</li>
-		<li ngbNavItem="bottom">
-			<a ngbNavLink>Bottom</a>
-			<ng-template ngbNavContent>
-				<p>
-					Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla
-					facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu,
-					congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices
-					et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus
-					faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci
-					varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem
-					aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.
-				</p>
-			</ng-template>
-		</li>
-	</ul>
+  <ul
+    ngbNav
+    #nav="ngbNav"
+    [(activeId)]="active"
+    class="nav-pills"
+    orientation="vertical"
+  >
+    <li ngbNavItem="top">
+      <a ngbNavLink>Resume</a>
+      <ng-template ngbNavContent>
+        <div>
+          <!-- <a routerLink="/resume" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="activeResume = true">Click me</a> -->
+          <app-resume></app-resume>
+        </div>
+      </ng-template>
+    </li>
+    <li ngbNavItem="middle">
+      <a ngbNavLink>Midterm Project</a>
+      <ng-template ngbNavContent class="schema">
+        <p>For my Midterm Project at Skill Distillery I was on a team with 3 other people. We created a website where one can create journal entries for beverages they have tried, specifically beer, wine and liquor. <br>
+        <br>
+        We created the web application using JSPs. On the backend we used Java, JPQL, Spring, and JPA. On this project I was the DBA and I created it using MySQL workbench.
+      <img class="schema" src="https://i.imgur.com/yBwPzs5.png" alt="Database SchemaDesign">
 
-	<div [ngbNavOutlet]="nav" class="ms-4"></div>
+    <br>
+    <strong>Link to application:</strong> <a href="http://sip.laurenackley.dev">http://sip.laurenackley.dev</a>
+    <br>
+    <strong>GitHub:</strong> <a href="https://github.com/laurenackley/MidtermProjectLauren"> https://github.com/laurenackley/MidtermProjectLauren </a>
+  </p>
+      </ng-template>
+    </li>
+    <li ngbNavItem="bottom">
+      <a ngbNavLink>Final Project</a>
+      <ng-template ngbNavContent>
+        <p>
+          Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget
+          sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae
+          odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu,
+          congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus
+          pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas
+          ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu.
+          Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis.
+          Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque
+          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Mauris aliquet odio ac lorem aliquet ultricies in eget neque.
+          Phasellus nec tortor vel tellus pulvinar feugiat.
+        </p>
+      </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ms-4"></div>
 </div>
 <router-outlet></router-outlet>
 <pre>Active: {{ active }}</pre>
 <div>
-
-  <ngb-carousel *ngIf="images">
+  <ngb-carousel class="carouselImages" *ngIf="images">
     <ng-template ngbSlide>
       <div class="pictures">
         <img [src]="images[0]" alt="Random first slide" />
@@ -79,7 +90,7 @@
     </ng-template>
     <ng-template ngbSlide>
       <div class="pictures">
-        <img  src="https://i.imgur.com/jmYBRjQ.jpg" alt="Random fourth slide" />
+        <img src="https://i.imgur.com/jmYBRjQ.jpg" alt="Random fourth slide" />
       </div>
       <div class="carousel-caption">
         <h3>And no wrap after last slide.</h3>
@@ -88,4 +99,3 @@
     </ng-template>
   </ngb-carousel>
 </div>
-
