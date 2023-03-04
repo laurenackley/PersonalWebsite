@@ -1,16 +1,23 @@
-<h1 id="name">Welcome to my personal Website!</h1>
+<div class="wholePage">
+
+  <section id="coolHeading">
+    <div class="content">
+      <h1>Welcome!</h1>
+    <h1>Welcome!</h1>
+  </div>
+</section>
 <br />
 <br />
 <br />
 <br />
 <div class="d-flex">
   <ul
-    ngbNav
-    #nav="ngbNav"
+  ngbNav
+  #nav="ngbNav"
     [(activeId)]="active"
     class="nav-pills"
     orientation="vertical"
-  >
+    >
     <li ngbNavItem="top">
       <a ngbNavLink>Resume</a>
       <ng-template ngbNavContent>
@@ -24,15 +31,15 @@
       <a ngbNavLink>Midterm Project</a>
       <ng-template ngbNavContent class="schema">
         <p>For my Midterm Project at Skill Distillery I was on a team with 3 other people. We created a website where one can create journal entries for beverages they have tried, specifically beer, wine and liquor. <br>
-        <br>
-        We created the web application using JSPs. On the backend we used Java, JPQL, Spring, and JPA. On this project I was the DBA and I created it using MySQL workbench.
-      <img class="schema" src="https://i.imgur.com/yBwPzs5.png" alt="Database SchemaDesign">
+          <br>
+          We created the web application using JSPs. On the backend we used Java, JPQL, Spring, and JPA. On this project I was the DBA and I created it using MySQL workbench.
+          <img class="schema" src="https://i.imgur.com/yBwPzs5.png" alt="Database SchemaDesign">
 
-    <br>
-    <strong>Link to application:</strong> <a href="http://sip.laurenackley.dev">http://sip.laurenackley.dev</a>
-    <br>
-    <strong>GitHub:</strong> <a href="https://github.com/laurenackley/MidtermProjectLauren"> https://github.com/laurenackley/MidtermProjectLauren </a>
-  </p>
+          <br>
+          <strong>Link to application:</strong> <a href="http://sip.laurenackley.dev">http://sip.laurenackley.dev</a>
+          <br>
+          <strong>GitHub:</strong> <a href="https://github.com/laurenackley/MidtermProjectLauren"> https://github.com/laurenackley/MidtermProjectLauren </a>
+        </p>
       </ng-template>
     </li>
     <li ngbNavItem="bottom">
@@ -46,54 +53,57 @@
           On this application we added encrypted passwords using Spring Security and saved it as a string so the password is saved raw and able to be viewed form the terminal.
           <br>
           What I really enjoyed about this project was that we used a lot of bootstrap to really make the application pop, in my opinion.
-          <strong>Link to Application:</strong>
-<strong>GitHub:</strong><a href="https://github.com/laurenackley/FinalProjectLauren/blob/main/README.md">https://github.com/laurenackley/FinalProjectLauren/blob/main/README.md</a>
-</p>
+          <strong>Link to Application:</strong><a href="http://3.142.85.199:8080/SkillSwap/#/home">http://3.142.85.199:8080/SkillSwap/#/home</a>
+          <br>
+          <strong>GitHub:</strong><a href="https://github.com/laurenackley/FinalProjectLauren/blob/main/README.md">https://github.com/laurenackley/FinalProjectLauren/blob/main/README.md</a>
+        </p>
       </ng-template>
     </li>
   </ul>
 
   <div [ngbNavOutlet]="nav" class="ms-4"></div>
 </div>
+<hr>
 <router-outlet></router-outlet>
-<pre>Active: {{ active }}</pre>
+<!-- <pre>Active: {{ active }}</pre> -->
 <div>
   <ngb-carousel class="carouselImages" *ngIf="images">
     <ng-template ngbSlide>
       <div class="pictures">
-        <img [src]="images[0]" alt="Random first slide" />
+        <img src="https://i.imgur.com/DGeV5N7.png" alt="Garden" />
       </div>
       <div class="carousel-caption">
-        <h3>10 seconds between slides...</h3>
-        <p>This carousel uses customized default values.</p>
+        <h3>First Garden Attempt</h3>
+        <p>One of my hobbies I recently picked up was gardening! This was actually my first attempt to grow something. It was really special when they all started to bloom. </p>
       </div>
     </ng-template>
     <ng-template ngbSlide>
       <div class="pictures">
-        <img [src]="images[1]" alt="Random second slide" />
+        <img src="https://i.imgur.com/Ug0uazZ.jpg" alt="Lemon Poppy Seed Cake" />
       </div>
       <div class="carousel-caption">
-        <h3>No mouse events...</h3>
-        <p>This carousel doesn't pause or resume on mouse events</p>
+        <h3>Baking is definitely a fun hobby of mine.</h3>
+        <p>I really enjoy baking and this was one that I was definitely happy to be a part of making.</p>
       </div>
     </ng-template>
     <ng-template ngbSlide>
       <div class="pictures">
-        <img [src]="images[2]" alt="Random third slide" />
+        <img src="https://i.imgur.com/ib6ztwj.jpg" alt="Elvira The Dog" />
       </div>
       <div class="carousel-caption">
-        <h3>No keyboard...</h3>
-        <p>This carousel uses customized default values.</p>
+        <h3>Elvira - the Dog</h3>
+        <p>This is my dog who was very impressed with herself after getting a new bandana.</p>
       </div>
     </ng-template>
     <ng-template ngbSlide>
       <div class="pictures">
-        <img src="https://i.imgur.com/jmYBRjQ.jpg" alt="Random fourth slide" />
+        <img src="https://i.imgur.com/jmYBRjQ.jpg" alt="Jack And Jules" />
       </div>
       <div class="carousel-caption">
-        <h3>And no wrap after last slide.</h3>
-        <p>This carousel uses customized default values.</p>
+        <h3>My Cats</h3>
+        <p>These are my two cats Jack and Jules!</p>
       </div>
     </ng-template>
   </ngb-carousel>
+</div>
 </div>
